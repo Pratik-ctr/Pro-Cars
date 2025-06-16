@@ -1,0 +1,397 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', Arial, sans-serif;
+  height: 70px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Left Section Styles */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImage {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: linear-gradient(to right, #1d1d1c, #c9cc0d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.locationSearchContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.locationDropdownContainer {
+  position: relative;
+}
+
+.locationDropdown {
+  border: none;
+  background-color: #f8fafc;
+  color: #1f2937;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 30px 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  appearance: none;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.locationDropdown:hover {
+  background-color: #f1f5f9;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dropdownArrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+}
+
+.searchInput {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 45px 10px 15px;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background-color: #ffffff;
+}
+
+.searchButton {
+  position: absolute;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #e2e8f0;
+}
+
+.searchIcon {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Right Section Styles */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.callText {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.phoneIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.phoneNumber {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.phoneLink:hover .phoneNumber {
+  opacity: 1;
+  width: auto;
+  margin-left: 5px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navLink, .dropdownToggle {
+  position: relative;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.linkMain {
+  position: relative;
+  z-index: 1;
+}
+
+.linkHover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover .linkHover,
+.dropdownToggle:hover .linkHover {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  gap: 5px;
+}
+
+.dropdownIcon {
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 8px 20px;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dropdownMenu a:hover {
+  background-color: #f1f5f9;
+  color: #3b82f6;
+}
+
+/* User Section */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.userButton:hover {
+  background-color: #f1f5f9;
+}
+
+.userIcon {
+  font-size: 18px;
+}
+
+.userText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.miscIcons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #64748b;
+  font-size: 14px;
+  margin-left: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  
+  .searchBox {
+    width: 200px;
+  }
+  
+  .rightSection {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .phoneNumber {
+    display: none;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+  
+  .userText {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .leftSection {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .locationSearchContainer {
+    width: 100%;
+  }
+  
+  .searchBox {
+    width: 100%;
+  }
+  
+  .rightSection {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .contact {
+    display: none;
+  }
+}
