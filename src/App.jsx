@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './component/navbar/Navbar'
-import Home from './pages/home'
+import Home from './pages/Home'
 // import Hero from './component/hero/Hero'
 const App=()=> {
   return (
