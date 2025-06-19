@@ -1,0 +1,117 @@
+
+
+.sliderSection {
+  text-align: center;
+  padding: 50px 20px;
+  /* background: #f7f4ed; */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2d074c;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+.cardsWrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.cardsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.cityCard {
+  flex: 0 0 auto;
+  min-width: 350px;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  padding: 25px 15px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cityCard:hover {
+  transform: translateY(-5px);
+}
+
+.cityCard h3 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.imageWrapper {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(-45deg);
+}
+
+.cityCard p {
+  font-size: 1rem;
+  color: white;
+}
+
+.navButton {
+  background: linear-gradient(145deg, #d4c1fc, #ede2ff);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  color: #4b0082;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background: #4b0082;
+  color: white;
+}
+
+.viewAllBtn {
+  margin-top: 30px;
+}
+
+.viewAllBtn button {
+  padding: 10px 24px;
+  border: 2px solid #4b0082;
+  background: transparent;
+  color: #4b0082;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewAllBtn button:hover {
+  background: #4b0082;
+  color: white;
+}

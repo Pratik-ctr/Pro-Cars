@@ -1,0 +1,181 @@
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.bodyTypeList {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  justify-content: center;
+}
+
+.bodyTypeList::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.bodyTypeItem {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.bodyTypeItem:hover {
+  color: #0066cc;
+}
+
+.bodyTypeItem.active {
+  color: #0066cc;
+  font-weight: 700;
+}
+
+.bodyTypeItem.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0066cc;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1rem 0;
+}
+
+.carGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.carCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.carCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.carDetails {
+  padding: 1rem;
+}
+
+.carName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.carPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.onwards {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.viewAll {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.viewAllButton {
+  background: none;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.viewAllBtn {
+  background: none;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.viewAllBtn:hover {
+  background-color: #0066cc;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.viewAllBtn:hover .arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .carGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .carGrid {
+    grid-template-columns: 1fr;
+  }
+}

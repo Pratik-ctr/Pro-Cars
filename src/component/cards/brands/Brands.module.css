@@ -1,0 +1,155 @@
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 0.5fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.brandCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.brandCard:hover {
+  transform: translateY(-3px);
+}
+
+.logoContainer {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandLogo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logoFallback {
+  display: none;
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.carCount {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1rem 0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.viewAllBtn {
+  background: none;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.viewAllBtn:hover {
+  background-color: #0066cc;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.viewAllBtn:hover .arrow {
+  transform: translateX(3px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .brandsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brandsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .logoContainer {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .logoContainer {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .brandName {
+    font-size: 0.9rem;
+  }
+}
